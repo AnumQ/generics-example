@@ -4,6 +4,7 @@ import { pickObjectKeys } from "./Generics/Generics";
 import { languageObj, languageKeys, personObj, personKeys } from "./Data/data";
 
 function App() {
+  // Example 1
   const ageAndExtensions = pickObjectKeys({
     obj: languageObj,
     keys: languageKeys,
