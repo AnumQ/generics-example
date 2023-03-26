@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import { Example1 } from "./Example1/Example1";
+import { ObjectKeysExample } from "./Example1/ObjectKeysExample";
 
 function App() {
   return (
     <div className="App">
-      <Example1 />
+      <ObjectKeysExample />
     </div>
   );
 }

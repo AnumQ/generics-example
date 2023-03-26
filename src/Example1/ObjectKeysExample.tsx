@@ -1,7 +1,7 @@
 import { Language, LanguageKeys } from "./Model/Language";
 import { Person, PersonKeys } from "./Model/Person";
 
-export const Example1 = () => {
+export const ObjectKeysExample = () => {
   // Example 1
   const ageAndExtensions = pickObjectKeys({
     obj: languageObj,
