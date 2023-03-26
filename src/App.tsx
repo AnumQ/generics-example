@@ -1,7 +1,12 @@
 import React from "react";
 import "./App.css";
-import { pickObjectKeys } from "./Generics/Generics";
-import { languageObj, languageKeys, personObj, personKeys } from "./Data/data";
+import { pickObjectKeys } from "./Example1/Generics/Generics";
+import {
+  languageObj,
+  languageKeys,
+  personObj,
+  personKeys,
+} from "./Example1/Data/data";
 
 function App() {
   // Example 1
