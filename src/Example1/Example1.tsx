@@ -1,5 +1,5 @@
-import { languageObj, languageKeys, personObj, personKeys } from "./Data/data";
-import { pickObjectKeys } from "./Generics/Generics";
+import { Language, LanguageKeys } from "./Model/Language";
+import { Person, PersonKeys } from "./Model/Person";
 
 export const Example1 = () => {
   // Example 1
@@ -16,7 +16,6 @@ export const Example1 = () => {
 
   return (
     <>
-      {" "}
       <p>{ageAndExtensions.age}</p>
       <p>{ageAndExtensions.extensions.toString()}</p>
       <p>{personAndGender.age}</p>
@@ -24,3 +23,35 @@ export const Example1 = () => {
     </>
   );
 };
+
+const languageObj: Language = {
+  name: "TypeScript",
+  age: 8,
+  extensions: ["ts", "tsx"],
+};
+
+const languageKeys: LanguageKeys[] = ["age", "extensions"];
+
+const personObj: Person = {
+  name: "John",
+  age: 30,
+  gender: "male",
+};
+
+const personKeys: PersonKeys[] = ["age", "gender"];
+
+function pickObjectKeys<T extends object, K extends keyof T>({
+  obj,
+  keys,
+}: {
+  obj: T;
+  keys: K[];
+}) {
+  let result: Pick<T, K> = {} as any;
+  for (const key of keys) {
+    if (key in obj) {
+      result[key] = obj[key];
+    }
+  }
+  return result;
+}
