@@ -1,12 +1,9 @@
 import React from "react";
 import "./App.css";
 import { pickObjectKeys } from "./Generics/Generics";
-import { languageObj, personObj } from "./Data/data";
-import { LanguageKeys } from "./Model/Language";
-import { PersonKeys } from "./Model/Person";
+import { languageObj, languageKeys, personObj, personKeys } from "./Data/data";
 
 function App() {
-  const languageKeys: LanguageKeys[] = ["age", "extensions"];
   const ageAndExtensions = pickObjectKeys({
     obj: languageObj,
     keys: languageKeys,
@@ -14,7 +11,6 @@ function App() {
   // 8
   // ts, tsx
 
-  const personKeys: PersonKeys[] = ["age", "gender"];
   const personAndGender = pickObjectKeys({ obj: personObj, keys: personKeys });
   // 30
   // male
