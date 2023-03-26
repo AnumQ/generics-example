@@ -12,6 +12,7 @@ function App() {
   // 8
   // ts, tsx
 
+  // Example 2
   const personAndGender = pickObjectKeys({ obj: personObj, keys: personKeys });
   // 30
   // male
